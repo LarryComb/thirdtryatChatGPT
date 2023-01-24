@@ -15,6 +15,8 @@
 		461B8D77297F880F00F84423 /* ThirdattemptatChatGPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B8D76297F880F00F84423 /* ThirdattemptatChatGPTUITests.swift */; };
 		461B8D79297F880F00F84423 /* ThirdattemptatChatGPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B8D78297F880F00F84423 /* ThirdattemptatChatGPTUITestsLaunchTests.swift */; };
 		461B8D86297F97F700F84423 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B8D85297F97F700F84423 /* Constant.swift */; };
+		461B8D88297F992C00F84423 /* OpenAIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B8D87297F992C00F84423 /* OpenAIServices.swift */; };
+		461B8D8B297F9B8300F84423 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 461B8D8A297F9B8300F84423 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		461B8D76297F880F00F84423 /* ThirdattemptatChatGPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdattemptatChatGPTUITests.swift; sourceTree = "<group>"; };
 		461B8D78297F880F00F84423 /* ThirdattemptatChatGPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdattemptatChatGPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		461B8D85297F97F700F84423 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		461B8D87297F992C00F84423 /* OpenAIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIServices.swift; sourceTree = "<group>"; };
+		461B8D8C297FBE6300F84423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461B8D8B297F9B8300F84423 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,9 +101,11 @@
 		461B8D5A297F880B00F84423 /* ThirdattemptatChatGPT */ = {
 			isa = PBXGroup;
 			children = (
+				461B8D8C297FBE6300F84423 /* Info.plist */,
 				461B8D5B297F880B00F84423 /* ThirdattemptatChatGPTApp.swift */,
 				461B8D5D297F880B00F84423 /* ContentView.swift */,
 				461B8D85297F97F700F84423 /* Constant.swift */,
+				461B8D87297F992C00F84423 /* OpenAIServices.swift */,
 				461B8D5F297F880F00F84423 /* Assets.xcassets */,
 				461B8D61297F880F00F84423 /* Preview Content */,
 			);
@@ -146,6 +153,9 @@
 			dependencies = (
 			);
 			name = ThirdattemptatChatGPT;
+			packageProductDependencies = (
+				461B8D8A297F9B8300F84423 /* Alamofire */,
+			);
 			productName = ThirdattemptatChatGPT;
 			productReference = 461B8D58297F880B00F84423 /* ThirdattemptatChatGPT.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 461B8D4F297F880B00F84423;
+			packageReferences = (
+				461B8D89297F9B8300F84423 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 461B8D59297F880B00F84423 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +276,7 @@
 				461B8D5E297F880B00F84423 /* ContentView.swift in Sources */,
 				461B8D5C297F880B00F84423 /* ThirdattemptatChatGPTApp.swift in Sources */,
 				461B8D86297F97F700F84423 /* Constant.swift in Sources */,
+				461B8D88297F992C00F84423 /* OpenAIServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +438,9 @@
 				DEVELOPMENT_TEAM = 782725GYA8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = ThirdattemptatChatGPT/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -453,7 +469,9 @@
 				DEVELOPMENT_TEAM = 782725GYA8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = ThirdattemptatChatGPT/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -587,6 +605,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		461B8D89297F9B8300F84423 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		461B8D8A297F9B8300F84423 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 461B8D89297F9B8300F84423 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 461B8D50297F880B00F84423 /* Project object */;
 }

@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
-    @State var chatMessages: [ChatMessage] = ChatMessage.sampleMessages
+    @State var chatMessages: [ChatMessage] = []
     @State var messageText: String = ""
     
+    let openAIService = OpenAIService()
+    @State var cancellables = Set<AnyCancellable>()
     var body: some View {
         VStack{
             ScrollView{
@@ -24,10 +27,10 @@ struct ContentView: View {
                 TextField("Enter A Message", text: $messageText){
                     
                 }
-                    .foregroundColor(.blue)
-                    .padding()
-                    .background(.gray.opacity(0.1))
-                    .cornerRadius(12)
+                .foregroundColor(.blue)
+                .padding()
+                .background(.gray.opacity(0.1))
+                .cornerRadius(12)
                 Button {
                     sendMessage()
                 } label: {
@@ -41,6 +44,7 @@ struct ContentView: View {
             }
         }
         .padding()
+        
     }
     
     func messageView(message: ChatMessage) -> some View {
@@ -53,11 +57,25 @@ struct ContentView: View {
         }
     }
     
-    func sendMessage() {
+    func sendMessage () {
+        
+        let myMessage = ChatMessage(id: UUID().uuidString, content:
+                                        messageText, dateCreated: Date(), sender: .me)
+        chatMessages.append (myMessage)
+        openAIService.sendMessage(message: messageText) .sink { completion in
+            // Handle error
+        } receiveValue: { response in
+            guard let textResponse = response.choices.first?.text else { return }
+            let gptMessage = ChatMessage(id: response.id, content: textResponse,
+                dateCreated: Date(), sender: .GPT)
+            chatMessages.append (gptMessage)
+        }
+        .store(in: &cancellables)
+        
         messageText = ""
-        print(messageText)
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
