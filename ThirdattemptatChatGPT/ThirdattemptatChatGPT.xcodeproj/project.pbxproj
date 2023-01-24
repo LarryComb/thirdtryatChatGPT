@@ -14,6 +14,7 @@
 		461B8D6D297F880F00F84423 /* ThirdattemptatChatGPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B8D6C297F880F00F84423 /* ThirdattemptatChatGPTTests.swift */; };
 		461B8D77297F880F00F84423 /* ThirdattemptatChatGPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B8D76297F880F00F84423 /* ThirdattemptatChatGPTUITests.swift */; };
 		461B8D79297F880F00F84423 /* ThirdattemptatChatGPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B8D78297F880F00F84423 /* ThirdattemptatChatGPTUITestsLaunchTests.swift */; };
+		461B8D86297F97F700F84423 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B8D85297F97F700F84423 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		461B8D72297F880F00F84423 /* ThirdattemptatChatGPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThirdattemptatChatGPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		461B8D76297F880F00F84423 /* ThirdattemptatChatGPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdattemptatChatGPTUITests.swift; sourceTree = "<group>"; };
 		461B8D78297F880F00F84423 /* ThirdattemptatChatGPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdattemptatChatGPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		461B8D85297F97F700F84423 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				461B8D5B297F880B00F84423 /* ThirdattemptatChatGPTApp.swift */,
 				461B8D5D297F880B00F84423 /* ContentView.swift */,
+				461B8D85297F97F700F84423 /* Constant.swift */,
 				461B8D5F297F880F00F84423 /* Assets.xcassets */,
 				461B8D61297F880F00F84423 /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				461B8D5E297F880B00F84423 /* ContentView.swift in Sources */,
 				461B8D5C297F880B00F84423 /* ThirdattemptatChatGPTApp.swift in Sources */,
+				461B8D86297F97F700F84423 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
