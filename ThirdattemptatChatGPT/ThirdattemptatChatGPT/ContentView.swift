@@ -57,6 +57,7 @@ struct ContentView: View {
         }
     }
     
+    
     func sendMessage () {
         
         let myMessage = ChatMessage(id: UUID().uuidString, content:
